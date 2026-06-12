@@ -19,8 +19,8 @@ This repository serves as a public showcase of my practical software engineering
 ### 🔐 Interactive Showcase Credentials
 To explore the live administrative dashboard capabilities without compromising database security, use the following sandbox credentials on the live application:
 * **Admin Login Portal:** `https://passport-to-paradise.free.nf/admin/login.php`
-* **Demo Username:** `admin` *(Or insert your safe sandbox username here)*
-* **Demo Password:** `Password123!` *(Or insert your safe sandbox password here)*
+* **Demo Username:** `admin` 
+* **Demo Password:** `Admin123!` 
 
 ---
 
@@ -59,3 +59,32 @@ passport-to-paradise/
 ├── sql/                       # Relational database schema architecture file (.sql)
 ├── challenge.php              # Dynamic gameplay view interface
 └── dashboard.php              # Live client progress profile metrics panel
+
+Presentation Layer: Renders user views (challenge.php, user dashboard) and structures modern client views.
+
+Business Logic Layer: Coordinates strict operational rules (process_answer.php), session monitoring, and score boundaries.
+
+Data Access Layer: Handles secure application interactions using parameterized channels (config/db.php).
+
+🔧 Technologies Used
+Backend Logic: PHP 8.x
+
+Database Management: MySQL
+
+Asynchronous Operations: JavaScript (Fetch API / JSON)
+
+Markup & Styling: HTML5 & CSS3 (Fully Responsive Design)
+
+🔮 Future Roadmap
+Refactor the system layout towards a strict RESTful API infrastructure.
+
+Inject anti-CSRF token verification parameters globally on form targets.
+
+Improve accessible interactions to fulfill strict WCAG & ARIA design criteria.
+
+Introduce an alternate decoupled SPA frontend utilizing React or Vue.js.
+
+🎯 Portfolio Purpose
+This project is a critical component of my professional software engineering portfolio. It demonstrates production-style implementation, clean code separation, security best practices, and interactive design paradigms using industry-standard web technologies.
+
+Note: For security and intellectual property protection, precise server keys, raw environment configs, and operational database salts are omitted or masked in this public repository.
