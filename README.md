@@ -2,92 +2,191 @@
 
 > **An Interactive, Gamified Full-Stack Travel Challenge Web Application**
 
-[![Live Demo](https://img.shields.io/badge/Demo-Live%20Website-brightgreen?style=for-the-badge&logo=internet-explorer)](https://passport-to-paradise.free.nf)
-[![Walkthrough](https://img.shields.io/badge/Video-Walkthrough%20Demo-red?style=for-the-badge&logo=youtube)](YOUR_YOUTUBE_OR_VIMEO_LINK_HERE)
-
-Passport to Paradise is a full-stack gamified travel challenge web application developed using **PHP, MySQL, JavaScript, HTML5, and CSS3**. Players progress through multiple holiday tiers—from *Budget* to *Paradise*—by completing interactive travel challenges, earning points, collecting passport stamps, and unlocking new destinations.
-
-This repository serves as a public showcase of my practical software engineering skills, demonstrating secure backend architecture, relational database design, asynchronous JavaScript interactions, and fully functional back-office administration.
+[![Live Demo](https://img.shields.io/badge/Demo-Live%20Website-brightgreen?style=for-the-badge\&logo=internet-explorer)](https://passport-to-paradise.free.nf)
+[![Walkthrough](https://img.shields.io/badge/Video-Walkthrough%20Demo-red?style=for-the-badge\&logo=youtube)](https://passport-to-paradise.free.nf)
 
 ---
 
-## 🔗 Project Links & Portals
+## 📖 Overview
 
-* **🌐 Live Production Deployment:** [https://passport-to-paradise.free.nf](https://passport-to-paradise.free.nf)
-* **🎬 Video Demonstration:** [Watch the App Walkthrough](YOUR_YOUTUBE_OR_VIMEO_LINK_HERE)
+**Passport to Paradise** is a full-stack gamified travel challenge web application developed using **PHP, MySQL, JavaScript, HTML5, and CSS3**.
 
-### 🔐 Interactive Showcase Credentials
-To explore the live administrative dashboard capabilities without compromising database security, use the following sandbox credentials on the live application:
-* **Admin Login Portal:** `https://passport-to-paradise.free.nf/admin/login.php`
-* **Demo Username:** `admin` 
-* **Demo Password:** `Admin123!` 
+Players progress through multiple holiday tiers—from **Budget** to **Paradise**—by completing interactive travel challenges, earning points, collecting passport stamps, and unlocking new destinations.
+
+This repository showcases practical software engineering skills, including secure backend architecture, relational database design, asynchronous JavaScript interactions, and a fully functional administrative dashboard.
 
 ---
 
-## ✨ Key Features
+## 🔗 Project Links
 
-### 🎮 Dynamic Challenge Engine
-* **Database-Driven Mechanics:** Challenges and questions are pulled dynamically based on player state.
-* **Server-Side Verification:** Form submissions pass securely through rigorous server-side answer checking.
-* **Automatic Progression:** Points are accurately aggregated to compute immediate tier transitions.
+### 🌐 Live Website
 
-### 📈 Real-Time Progress Tracking
-* **Asynchronous Updates:** Live UI interaction handling via the native **JavaScript Fetch API**.
-* **Seamless Experience:** Score updates, badge rewards, and lock metrics refresh in real time without annoying page reloads.
+https://passport-to-paradise.free.nf
 
-### 🛠️ Administrative Dashboard (Full CRUD)
-* **Content Control:** Complete system management portal allowing verified admins to **Create, Read, Update, and Delete** Destinations, Challenges, and Holiday Tiers.
-* **Analytics Views:** Track player metrics, attempts, and database state logs securely.
+### 🎬 Video Walkthrough
 
-### 🔒 Secure System Design
-* **SQL Injection Defenses:** 100% of communication queries run via strictly prepared SQL statements.
-* **State Management:** Secure session structures protect user identities and validation parameters.
-* **Data Safeguards:** Password hashing engines preserve user security.
+https://passport-to-paradise.free.nf
 
 ---
 
-## 🏗️ Architecture & Directory Overview
+## 🔐 Demo Admin Credentials
 
-The application follows a clean, layered layout to ensure separation of concerns and maintainability:
+To explore the administrative dashboard safely, use the following sandbox credentials:
+
+**Admin Login**
+
+https://passport-to-paradise.free.nf/admin/login.php
+
+| Username | Password    |
+| -------- | ----------- |
+| `admin`  | `Admin123!` |
+
+---
+
+# ✨ Features
+
+## 🎮 Dynamic Challenge Engine
+
+* Database-driven travel challenges
+* Dynamic question loading based on player progress
+* Secure server-side answer validation
+* Automatic point calculation and tier progression
+
+---
+
+## 📈 Real-Time Progress Tracking
+
+* JavaScript Fetch API integration
+* Live score updates
+* Instant badge rewards
+* Seamless UI refreshes without page reloads
+
+---
+
+## 🛠️ Administrative Dashboard (CRUD)
+
+The admin panel allows authorized users to manage application content through complete CRUD functionality.
+
+### Includes management for:
+
+* Destinations
+* Challenges
+* Holiday Tiers
+* Player analytics
+* Attempts monitoring
+* Database records
+
+---
+
+## 🔒 Security Features
+
+The application incorporates several security best practices:
+
+* Prepared SQL statements throughout
+* SQL injection protection
+* Secure PHP session management
+* Password hashing
+* Server-side validation
+* Controlled database access
+
+---
+
+# 🏗️ Project Structure
 
 ```text
 passport-to-paradise/
-├── admin/                     # Admin Panels & Management APIs (CRUD Logic)
-├── assets/                    # Presentation elements (CSS layouts, JavaScript Fetch modules, Audio/Images)
-├── config/                    # System configurations & Core database connection strings (Masked for Public Safety)
-├── includes/                  # Global application modules, validation logic, and template components
-├── sql/                       # Relational database schema architecture file (.sql)
-├── challenge.php              # Dynamic gameplay view interface
-└── dashboard.php              # Live client progress profile metrics panel
-
+│
+├── admin/
+│   └── Admin Panels & CRUD Management
+│
+├── assets/
+│   ├── css/
+│   ├── js/
+│   ├── images/
+│   └── audio/
+│
+├── config/
+│   └── Database configuration (masked in public repository)
+│
+├── includes/
+│   └── Shared components and helper functions
+│
+├── sql/
+│   └── Database schema (.sql)
+│
+├── challenge.php
+├── dashboard.php
+├── process_answer.php
+├── restart_journey.php
+├── start.php
+└── index.php
+```
 
 ---
 
-Presentation Layer: Renders user views (challenge.php, user dashboard) and structures modern client views.
+# 📋 Layered Architecture
 
-Business Logic Layer: Coordinates strict operational rules (process_answer.php), session monitoring, and score boundaries.
+| Layer                    | Responsibility                                                  | Main Components                                             |
+| ------------------------ | --------------------------------------------------------------- | ----------------------------------------------------------- |
+| **Presentation Layer**   | Renders user interfaces and handles client interactions         | `index.php`, `challenge.php`, `dashboard.php`, `assets/js/` |
+| **Business Logic Layer** | Controls gameplay rules, validation, sessions, and scoring      | `process_answer.php`, `start.php`, `restart_journey.php`    |
+| **Data Access Layer**    | Performs secure database operations using parameterized queries | `config/db.php`, `includes/functions.php`, `sql/`           |
 
-Data Access Layer: Handles secure application interactions using parameterized channels (config/db.php).
+---
 
-🔧 Technologies Used
-Backend Logic: PHP 8.x
+# 🔧 Technologies Used
 
-Database Management: MySQL
+## Backend
 
-Asynchronous Operations: JavaScript (Fetch API / JSON)
+* PHP 8.x
 
-Markup & Styling: HTML5 & CSS3 (Fully Responsive Design)
+## Database
 
-🔮 Future Roadmap
-Refactor the system layout towards a strict RESTful API infrastructure.
+* MySQL
 
-Inject anti-CSRF token verification parameters globally on form targets.
+## Frontend
 
-Improve accessible interactions to fulfill strict WCAG & ARIA design criteria.
+* HTML5
+* CSS3
+* JavaScript
 
-Introduce an alternate decoupled SPA frontend utilizing React or Vue.js.
+## Asynchronous Communication
 
-🎯 Portfolio Purpose
-This project is a critical component of my professional software engineering portfolio. It demonstrates production-style implementation, clean code separation, security best practices, and interactive design paradigms using industry-standard web technologies.
+* Fetch API
+* JSON
 
-Note: For security and intellectual property protection, precise server keys, raw environment configs, and operational database salts are omitted or masked in this public repository.
+## Responsive Design
+
+* Mobile-friendly layouts
+* Modern CSS styling
+
+---
+
+# 🚀 Future Improvements
+
+* Refactor the application into a RESTful API architecture
+* Implement global CSRF protection
+* Improve accessibility to meet WCAG and ARIA standards
+* Develop a decoupled SPA frontend using React or Vue.js
+
+---
+
+# 🎯 Portfolio Purpose
+
+This project forms an important part of my software engineering portfolio and demonstrates:
+
+* Full-stack web development
+* Secure backend programming
+* Relational database design
+* CRUD application development
+* Asynchronous JavaScript
+* Session management
+* Responsive UI implementation
+* Clean project architecture
+* Industry-standard web development practices
+
+---
+
+## 📝 Note
+
+For security and intellectual property protection, sensitive information such as environment variables, production configuration files, secret keys, and database credentials has been intentionally omitted or masked from this public repository.
