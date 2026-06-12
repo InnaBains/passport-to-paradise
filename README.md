@@ -187,6 +187,15 @@ This project forms an important part of my software engineering portfolio and de
 
 ---
 
-## 📝 Note
+## 🔒 Private Repository Access
 
-For security and intellectual property protection, sensitive information such as environment variables, production configuration files, secret keys, and database credentials has been intentionally omitted or masked from this public repository.
+The full, unmasked source code for this application is hosted securely within a private GitHub repository. 
+Academic examiners or prospective employers can request repository access by contacting the author:
+
+* **Author:** Inna Bains  
+* **Degree:** BSc (Hons) Computing, Arden University (2026)  
+* **Email:** [innessyk@gmail.com](mailto:innessyk@gmail.com)  
+
+---
+
+> **Note:** *For security and intellectual property protection, the backend processing logic, configuration files, administrative directories, and core database credentials have been intentionally omitted from this public repository. The complete, unmasked source code is maintained securely within a private repository.*
