@@ -128,7 +128,7 @@ passport-to-paradise/
 
 | Layer                    | Responsibility                                                  | Main Components                                             |
 | ------------------------ | --------------------------------------------------------------- | ----------------------------------------------------------- |
-| **Presentation Layer**   | Renders user interfaces and handles client interactions         | `index.php`, `challenge.php`, `dashboard.php`, `assets/js/` |
+| **Presentation Layer**   | Renders user interfaces and handles client interactions         | `index.php`, `challenge.php`, `dashboard.php`, `assets/js/challenge.js` |
 | **Business Logic Layer** | Controls gameplay rules, validation, sessions, and scoring      | `process_answer.php`, `start.php`, `restart_journey.php`    |
 | **Data Access Layer**    | Performs secure database operations using parameterized queries | `config/db.php`, `includes/functions.php`, `sql/`           |
 
