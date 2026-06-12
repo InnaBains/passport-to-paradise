@@ -60,6 +60,9 @@ passport-to-paradise/
 ├── challenge.php              # Dynamic gameplay view interface
 └── dashboard.php              # Live client progress profile metrics panel
 
+
+---
+
 Presentation Layer: Renders user views (challenge.php, user dashboard) and structures modern client views.
 
 Business Logic Layer: Coordinates strict operational rules (process_answer.php), session monitoring, and score boundaries.
